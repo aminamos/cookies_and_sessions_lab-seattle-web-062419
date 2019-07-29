@@ -4,10 +4,10 @@ class ProductsController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @cart = session[:cart] ||= []
   end
 
   def add
-    @cart = session[:cart] ||= []
+    @cart
+    byebug
   end
 end
